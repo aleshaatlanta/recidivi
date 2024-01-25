@@ -1,0 +1,114 @@
+.header {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 17px;
+
+    &__row {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav {
+        gap: 0 32px;
+    }
+
+    &__list {
+        gap: 0 51px;
+    }
+
+    &__link {
+        color: #FFF;
+        font-family: $mainfont;
+        font-weight: 400;
+        font-size: 13px;
+        text-decoration: none;
+
+    &:last-child {
+        margin-right: 3px;
+    }
+
+    }
+}
+
+.navToggle {
+    display:none;
+}
+
+.navToggle span {
+    display: block;
+    width: 20px;
+    height: 1px;
+    background-color: #FFF;
+    margin: 3px 0;
+}
+
+@media (max-width:768px) {
+    .header__nav {
+       position:fixed;
+       top: 0;
+       left: 0;
+       width: 80%;
+       background-color: #0e0f1d;
+       height: 100vh;
+       z-index: 1000;
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       justify-content: center;
+       gap: 20px;
+       padding: 50px 30px;
+       transform:translateX(-100%);
+       transition: all .3s linear;
+       
+    }
+
+    .header__nav.header__show {
+        transform: translateX(0);
+        transition: all .3s linear;
+    }
+
+    .header__list {
+        display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       justify-content: center;
+       gap: 20px;
+      
+    }
+
+    .header__link {
+        font-size: 22px;
+        transform:translateX(-200%);
+        transition: all .5s linear;
+    }
+    
+    .header__nav.header__show .header__link {
+        transform: translateX(0);
+        transition: all .5s linear;
+    }
+
+    .navToggle {
+        display:flex;
+        flex-direction: column;
+    }
+    
+}
+
+.header.shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(#000, .8);
+    padding: 17px 0;
+    transition: all .5s linear;
+}
+
+@media (max-width:520px) {
+    .header__nav {
+        width: 60%;
+    }
+}

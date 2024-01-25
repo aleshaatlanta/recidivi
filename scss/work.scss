@@ -1,0 +1,75 @@
+.work {
+    padding: clamp( 70px, 11.40625vw, 146px) 0;
+    background-color: #001F1F;
+
+    &__content {
+        grid-column: 4 span;
+    }
+
+    &__title {
+        color: #FAFAFA;
+        font-family: $secondfont;
+        font-size: clamp(20px, 2.8125vw, 36px);
+        margin-bottom: 43px;
+    }
+
+    &__paragraph {
+        color: #FAFAFA;
+        font-size: 18px;
+        margin-bottom: 37px;
+        max-width: 317px;
+        line-height: 1.55;
+    }
+
+    &__button {
+        background-color: #00665F;;
+        color: #FFF;
+        font-size: 14px;
+        padding: 16px 32px;
+        border-radius: 80px;
+    }
+
+    &__photo {
+        grid-column: 7/5 span;
+    }
+
+    &__map {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .work__row {
+        gap:20px;
+    }
+
+    .work__content {
+        grid-column: 12 span;
+        text-align: center;
+        
+    }
+
+    .work__map {
+        margin: 0 auto;
+    }
+
+    .work__paragraph {
+        max-width: 100%;
+    }
+
+    .work__photo {
+        grid-column: 12 span;
+    }
+}
+
+@media (max-width:768px) {
+    .work__content {
+        grid-column: 4 span;
+    }
+    .work__photo {
+        grid-column: 4 span;
+    }
+
+}
+

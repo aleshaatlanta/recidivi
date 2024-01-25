@@ -1,0 +1,147 @@
+.press {
+    padding: clamp(70px, 6.25vw, 80px) 0 clamp(70px, 10.3125vw, 132px) ;
+   
+
+    &__inner {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        color: #003331;
+        font-family: $secondfont;
+        font-size: clamp( 20px, 2.109375vw, 27px);
+    }
+
+    &__btn {
+        color: #00413E;
+        font-size: 13px;
+        padding: 17px 33px;
+        border-radius: 80px;
+        border: 1px solid rgba(53, 83, 98);
+    }
+
+    &__row {
+        row-gap: 52px;
+    }
+
+    &__item {
+        grid-column: 4 span;
+        
+    }
+
+    &__content {
+        border-top: 1px solid rgba(53, 83, 98, 0.30);;
+        gap: 0 16px;
+        padding-top: 20px;
+        padding-left: 40px;
+        position: relative;
+
+        &::before {
+            content: '';
+            display:inline-block;
+            padding-top: 16px;
+            position:absolute;
+            top: 0;
+            left: 0;
+        }
+
+        }
+
+        &--ted::before {
+            content: url(../img/press/ted.svg)
+        }
+
+        &--news::before {
+            content: url(../img/press/news.svg)
+        }
+
+        &--department::before {
+            content: url(../img/press/department.svg)
+        }
+
+        &--times::before {
+            content: url(../img/press/times.svg)
+        }
+
+        &--corrections::before {
+            content: url(../img/press/corrections.svg)
+        }
+
+        &--on::before {
+            content: url(../img/press/on.svg)
+        }
+
+        &--ted {
+            margin-bottom: 11px;
+        }
+
+        &--news {
+            margin-bottom: 14px;
+        }
+
+        &--department {
+            margin-bottom: 14px;
+        }
+
+        &--times {
+            margin-bottom: 11px;
+        }
+
+        &--corrections {
+            margin-bottom: 14px;
+        }
+
+        &--on {
+            margin-bottom: 14px;
+        }
+
+        &__media {
+            color: rgba(53, 83, 98, 0.60);
+            font-size: 11px;
+        }
+
+        &__date {
+            color: rgba(53, 83, 98, 0.60);
+            font-size: 11px;
+        }
+
+        &__words {
+            color: #00413E;
+            font-size: 17px;
+        }
+
+        &--data {
+            max-width: 326px;
+        }
+
+        &--outcomes {
+            max-width: 340px;
+        }
+
+        &--together {
+            max-width: 334px;
+        }
+
+
+
+   }
+
+   @media (max-width:420px) {
+    .press__inner {
+        gap: 20px;
+        
+    }
+    .press__title {
+        width: 100%;
+        text-align: center;
+    }
+    .press__btn {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 225px;
+    }
+   }
+
+    

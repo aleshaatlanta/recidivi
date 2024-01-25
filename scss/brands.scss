@@ -1,0 +1,105 @@
+.brands {
+    padding: 24px 0 21px;
+
+    &__item {
+        border-top: 1px solid  rgba(53, 83, 98, 0.30);
+        padding-top: 16px;
+        grid-column: 2 span;
+    }
+
+    &__content {
+        color: rgba(53, 83, 98, 0.80);
+        font-family: $mainfont;
+        font-weight: 400;
+        font-size: 15px;
+        padding-left: 32px;
+        position: relative;
+
+        
+    &::before {
+            content: '';
+            display:inline-block;
+            position:absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 24px;
+        }
+        
+        }
+
+        &--ted {
+            
+            &::before {
+                content: url(../img/brands/ted.svg);
+                
+        }
+    }
+
+        &--times {
+            
+            &::before {
+                content: url(../img/brands/times.svg);
+               
+            }
+        }
+
+        &--state {
+            
+            &::before {
+                content: url(../img/brands/state.svg);
+               
+            }
+        }
+
+        &--press {
+            
+            &::before {
+                content: url(../img/brands/press.svg);
+                
+        }
+    }
+
+        &--time {
+            
+            &::before {
+                content: url(../img/brands/time.svg);
+                
+            }
+        }
+
+        &--free {
+            
+            &::before {
+                content: url(../img/brands/free.svg);
+                
+            }
+        }
+    }
+
+    @media (max-width:768px) {
+        .brands__row {
+            gap: 20px !important;
+        }
+
+    }
+
+    @media (max-width:420px) {
+        .brands__item {
+           grid-column: 4 span;
+        }
+    }
+   
+    
+   
+
+   
+
+   
+
+    
+
+
+
+
+    
